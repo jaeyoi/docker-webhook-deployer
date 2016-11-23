@@ -2,4 +2,5 @@
 
 docker pull $IMAGE
 docker stop $CONTAINER
-docker run -d -p $PORT:$PORT --name $CONTAINER $IMAGE
+docker rm $CONTAINER
+docker run -d -p $PORT --name $CONTAINER $IMAGE

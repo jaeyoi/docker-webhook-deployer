@@ -49,6 +49,9 @@ case "$1" in
     docker stop $CONTAINER_NAME
     docker rm $CONTAINER_NAME
     ;;
+  logs)
+    docker logs $CONTAINER_NAME
+    ;;
   *)
     echo "Usage: docker-webhook-deployer {run|stop|add-image|add-compose|remove|list}." || true
     exit 1
